@@ -17,3 +17,39 @@ const sumTwoSmallestNumbers = (numbers) => {
 console.log(sumTwoSmallestNumbers(numArr));
 
 
+/*
+Task 2
+In this simple exercise, you will create a program that will take two lists of integers, a and b. Each list will consist of 3 positive integers above 0, representing the dimensions of cuboids a and b.
+You must find the difference of the cuboids' volumes regardless of which is bigger.
+For example, if the parameters passed are ([2, 2, 3], [5, 4, 1]), the volume of a is 12 and the volume of b is 20. Therefore, the function should return 8.
+Your function will be tested with pre-made examples as well as random ones.
+If you can, try writing it in one line of code.
+ */
+
+const nums1 = [4, 6, 1];
+const nums2 = [4, 4, 14];
+function findDifference(a, b) {
+    const sum1 = a.reduce((a, v) => a * v);
+    const sum2 = b.reduce((a, v) => a * v);
+    if(sum1 > sum2){
+        return sum1 - sum2;
+    } else {
+        return  sum2 - sum1;
+    }
+}
+
+console.log(findDifference(nums1, nums2));
+
+
+/*
+Some other solution for the second task:
+
+function find_difference([a,b,c], [d,e,f]) {
+  return Math.abs(a*b*c-d*e*f)
+}
+
+function find_difference(a, b) {
+  return Math.abs(a.reduce(function(x,y){return x*y;}) - b.reduce(function(x,y){return x*y;}))
+}
+
+ */
