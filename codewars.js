@@ -53,3 +53,26 @@ function find_difference(a, b) {
 }
 
  */
+
+
+
+
+//Week 12
+
+/*
+Task 1
+Return the number (count) of vowels in the given string.
+We will consider a, e, i, o, u as vowels for this Kata (but not y).
+The input string will only consist of lower case letters and/or spaces.
+ */
+
+const name = 'nata'
+const getCount = (str) => {
+    return str
+        .toLowerCase()
+        .split('')
+        .filter(letter =>
+            letter === 'a'|| letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' ).length;
+}
+
+console.log(getCount(name));
