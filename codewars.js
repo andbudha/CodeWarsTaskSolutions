@@ -165,5 +165,23 @@ function addFive(num) {
 console.log(addFive(5));
 
 
+/*
+Task 2
+Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) 
+that receive a list of integers as input, and return the largest and lowest number in that list, respectively.
+!!!Solution to be noted!!!
+
+const min = (list) => Math.min(...list);
+const max = (list) => Math.max(...list);
+ */
 
 
+const arr = [5, 9, 64, 29, 87, 46, 20, 10, 29, -5, 64, -84, 67, -9];
+
+const min = (list) => list.sort((a, b) => a > b ? 1 : -1)[0];
+
+console.log(min(arr));
+
+const max = (list) => list.sort((a, b) => a > b ? -1 : 1)[0];
+
+console.log(max(arr));
