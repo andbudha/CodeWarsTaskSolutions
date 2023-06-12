@@ -10,8 +10,8 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 
 const numArr = [4, 13, 67, 55, 9];
 const sumTwoSmallestNumbers = (numbers) => {
-    const newArr = numbers.sort( (a,b) => a-b);
-    return newArr[0]+newArr[1];
+    const newArr = numbers.sort((a, b) => a - b);
+    return newArr[0] + newArr[1];
 };
 
 console.log(sumTwoSmallestNumbers(numArr));
@@ -31,10 +31,10 @@ const nums2 = [4, 4, 14];
 function findDifference(a, b) {
     const sum1 = a.reduce((a, v) => a * v);
     const sum2 = b.reduce((a, v) => a * v);
-    if(sum1 > sum2){
+    if (sum1 > sum2) {
         return sum1 - sum2;
     } else {
-        return  sum2 - sum1;
+        return sum2 - sum1;
     }
 }
 
@@ -72,7 +72,7 @@ const getCount = (str) => {
         .toLowerCase()
         .split('')
         .filter(letter =>
-            letter === 'a'|| letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u' ).length;
+            letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u').length;
 }
 
 console.log(getCount(name));
@@ -93,7 +93,7 @@ remove("Hi") == "Hi"
 
 const string = 'Hi John!'
 
-function remove (str) {
+function remove(str) {
     //coding and coding....
     return str.at(-1) === '!' ? str.slice(0, -1) : str;
 }
@@ -115,7 +115,7 @@ All values will be positive integers or floats, or zero.
 
 
 function plural(n) {
-    return n !==1;
+    return n !== 1;
 }
 
 console.log(plural(2));
@@ -136,9 +136,34 @@ Basements (negatives) stay the same as the universal level.
 function getRealFloor(n) {
     if (n === 0 || n < 0) {
         return n;
-    }  else if (n > 0 && n < 13){
+    } else if (n > 0 && n < 13) {
         return n - 1;
-    } return n -2;
+    } return n - 2;
 }
 
-console.log(getRealFloor(5))
+console.log(getRealFloor(5));
+
+
+//Week 14
+
+/*
+Task 1
+I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
+Can you help me fix the function?
+
+function addFive(num) {
+    var total = num + 5
+    return num;
+}
+*/
+
+function addFive(num) {
+    var total = num + 5
+    return total;
+}
+
+console.log(addFive(5));
+
+
+
+
