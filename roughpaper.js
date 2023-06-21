@@ -1,14 +1,10 @@
 
-const math = (a, b, operator) => {
-    if (operator === 'add') {
-        return a + b;
-    } else if (operator === 'substract') {
-        return a - b;
-    } else if (operator === 'multiply') {
-        return a * b;
-    } else if (operator === 'devide') {
-        return a / b;
+function between(a, b) {
+    let arr = [];
+    for (let i = a; i <= b; i++) {
+        arr.push(i);
     }
+    return arr;
 }
+console.log(between(2, 9));
 
-console.log(math(5, 6, 'multiply'));
