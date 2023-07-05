@@ -240,3 +240,28 @@ function between(a, b) {
     return arr;
 }
 console.log(between(2, 9));
+
+
+
+//Week 16
+
+/*
+Task 1
+GComplete the solution so that the function will break up camel casing, using a space between words.
+
+"camelCasing"  =>  "camel Casing"
+"identifier"   =>  "identifier"
+""             =>  ""
+*/
+
+
+
+const string1 = "camelCasing"
+const string2 = "identifier"
+
+function solution(string) {
+    return string.split('').map(el => el.toLocaleUpperCase() === el ? ' ' + el : el).join('');
+}
+
+console.log(solution(string1));
+

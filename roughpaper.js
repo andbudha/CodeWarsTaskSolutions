@@ -1,10 +1,12 @@
 
-function between(a, b) {
-    let arr = [];
-    for (let i = a; i <= b; i++) {
-        arr.push(i);
-    }
-    return arr;
-}
-console.log(between(2, 9));
 
+
+
+const string1 = "camelCasing"
+const string2 = "identifier"
+
+function solution(string) {
+    return string.split('').map(el => el.toLocaleUpperCase() === el ? ' ' + el : el).join('');
+}
+
+console.log(solution(string1));
