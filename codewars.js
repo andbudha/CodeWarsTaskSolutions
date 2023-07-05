@@ -1,3 +1,21 @@
+//Week 1
+
+/*
+Task 1
+Complete the square sum function so that it squares each number passed into it and then sums the results together.
+For example, for [1, 2, 2] it should return 9.
+ */
+
+const numbers = [1, 2, 2]
+function squareSum(numbers) {
+    let total = 0;
+    for (let element of numbers)
+        total = (element * element) + total;
+    return total;
+}
+
+console.log(squareSum(numbers));
+
 
 //Week 11
 
