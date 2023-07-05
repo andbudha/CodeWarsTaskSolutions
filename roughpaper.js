@@ -1,12 +1,10 @@
 
-
-
-
-const string1 = "camelCasing"
-const string2 = "identifier"
-
-function solution(string) {
-    return string.split('').map(el => el.toLocaleUpperCase() === el ? ' ' + el : el).join('');
+function combat(health, damage) {
+    if (health < damage) {
+        return 0;
+    } else {
+        return health - damage;
+    }
 }
 
-console.log(solution(string1));
+console.log(combat(100, 110));

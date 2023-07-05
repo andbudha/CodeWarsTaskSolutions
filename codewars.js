@@ -54,9 +54,6 @@ function find_difference(a, b) {
 
  */
 
-
-
-
 //Week 12
 
 /*
@@ -76,7 +73,6 @@ const getCount = (str) => {
 }
 
 console.log(getCount(name));
-
 
 /*
 Task 2
@@ -100,8 +96,6 @@ function remove(str) {
 
 console.log(remove(string));
 
-
-
 //Week 13
 
 /*
@@ -113,14 +107,11 @@ You only need to worry about english grammar rules for this kata, where anything
 All values will be positive integers or floats, or zero.
  */
 
-
 function plural(n) {
     return n !== 1;
 }
 
 console.log(plural(2));
-
-
 
 /*
 Task 2
@@ -143,7 +134,6 @@ function getRealFloor(n) {
 
 console.log(getRealFloor(5));
 
-
 //Week 14
 
 /*
@@ -164,7 +154,6 @@ function addFive(num) {
 
 console.log(addFive(5));
 
-
 /*
 Task 2
 Your task is to make two functions ( max and min, or maximum and minimum, etc., depending on the language ) 
@@ -175,7 +164,6 @@ const min = (list) => Math.min(...list);
 const max = (list) => Math.max(...list);
  */
 
-
 const arr = [5, 9, 64, 29, 87, 46, 20, 10, 29, -5, 64, -84, 67, -9];
 
 const min = (list) => list.sort((a, b) => a > b ? 1 : -1)[0];
@@ -185,7 +173,6 @@ console.log(min(arr));
 const max = (list) => list.sort((a, b) => a > b ? -1 : 1)[0];
 
 console.log(max(arr));
-
 
 //Week 15
 
@@ -217,7 +204,6 @@ function arithmetic(a, b, operator) {
     }
 }
 
-
 /*
 Task 2
 Complete the function that takes two integers (a, b, where a < b) 
@@ -230,8 +216,6 @@ b = 4
 --> [1, 2, 3, 4]
  */
 
-
-
 function between(a, b) {
     let arr = [];
     for (let i = a; i <= b; i++) {
@@ -240,8 +224,6 @@ function between(a, b) {
     return arr;
 }
 console.log(between(2, 9));
-
-
 
 //Week 16
 
@@ -254,14 +236,27 @@ GComplete the solution so that the function will break up camel casing, using a 
 ""             =>  ""
 */
 
-
-
 const string1 = "camelCasing"
 const string2 = "identifier"
 
 function solution(string) {
-    return string.split('').map(el => el.toLocaleUpperCase() === el ? ' ' + el : el).join('');
+    return string.split('').map(el => el.toUpperCase() === el ? ' ' + el : el).join('');
 }
 
 console.log(solution(string1));
 
+/*
+Task 2
+Create a combat function that takes the player's current health and the amount of damage recieved, 
+and returns the player's new health. Health can't be less than 0.
+*/
+
+function combat(health, damage) {
+    if (health < damage) {
+        return 0;
+    } else {
+        return health - damage;
+    }
+}
+
+console.log(combat(100, 110));
