@@ -17,6 +17,26 @@ function squareSum(numbers) {
 console.log(squareSum(numbers));
 
 
+/*
+Task 2
+You only need one - Beginner
+You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
+Array can contain numbers or strings. X can be either.
+Return true if the array contains the value, false if not.
+ */
+
+const arr1 = [5, 'Andrei', 9]
+const value1 = 'Andrei'
+
+const value2 = 7;
+
+function check(a, x) {
+    return a.indexOf(x) === -1 ? false : true;
+}
+
+
+console.log(check(arr1, value2));
+
 //Week 11
 
 /*

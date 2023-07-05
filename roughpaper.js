@@ -1,10 +1,12 @@
 
-function combat(health, damage) {
-    if (health < damage) {
-        return 0;
-    } else {
-        return health - damage;
-    }
+const arr1 = [5, 'Andrei', 9]
+const value1 = 'Andrei'
+
+const value2 = 7;
+
+function check(a, x) {
+    return a.indexOf(x) === -1 ? false : true;
 }
 
-console.log(combat(100, 110));
+
+console.log(check(arr1, value2));
