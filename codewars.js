@@ -301,6 +301,7 @@ console.log(combat(100, 110));
 
 /*
 Week 17
+
 Task 1
 Description
 The wide - mouth frog is particularly interested in the eating habits of other creatures.
@@ -318,4 +319,14 @@ function mouthSize(animal) {
 
 console.log(mouthSize('alligator'));
 
+/*
+Task 2
+Write a function that returns a string in which firstname is swapped with last name.
+"john McClane" --> "McClane john"
+*/
 
+function nameShuffler(str) {
+    return str.split(' ').reverse().join(' ');
+}
+
+console.log(nameShuffler('Bartov Andrei'));
