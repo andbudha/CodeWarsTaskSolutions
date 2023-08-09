@@ -1,12 +1,32 @@
 
-const arr1 = [5, 'Andrei', 9]
-const value1 = 'Andrei'
-
-const value2 = 7;
-
-function check(a, x) {
-    return a.indexOf(x) === -1 ? false : true;
+const languages = {
+    english: 'Welcome',
+    czech: 'Vitejte',
+    danish: 'Velkomst',
+    dutch: 'Welkom',
+    estonian: 'Tere tulemast',
+    finnish: 'Tervetuloa',
+    flemish: 'Welgekomen',
+    french: 'Bienvenue',
+    german: 'Willkommen',
+    irish: 'Failte',
+    italian: 'Benvenuto',
+    latvian: 'Gaidits',
+    lithuanian: 'Laukiamas',
+    polish: 'Witamy',
+    spanish: 'Bienvenido',
+    swedish: 'Valkommen',
+    welsh: 'Croeso'
 }
 
+function greet(language) {
+    const lang = Object.keys(languages).find(el => el === language)
+    if (lang) {
+        return languages[language]
+    } else {
+        return languages.english
+    }
+}
 
-console.log(check(arr1, value2));
+console.log(greet('irish'));
+
