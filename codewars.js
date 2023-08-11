@@ -404,3 +404,20 @@ function greet(language) {
 
 console.log(greet('irish'));
 
+/*
+Week 19
+
+Task 1
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. 
+Return the resulting string.
+
+Note: input will never be an empty string
+*/
+
+
+const fakeBin = (num) => {
+    if (!num) return false;
+    return Number(num) < 5 ? num = new String(0)[0] : num = new String(1)[0];
+}
+const result2 = fakeBin('5');
+console.log(result2);

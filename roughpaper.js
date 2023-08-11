@@ -1,32 +1,7 @@
 
-const languages = {
-    english: 'Welcome',
-    czech: 'Vitejte',
-    danish: 'Velkomst',
-    dutch: 'Welkom',
-    estonian: 'Tere tulemast',
-    finnish: 'Tervetuloa',
-    flemish: 'Welgekomen',
-    french: 'Bienvenue',
-    german: 'Willkommen',
-    irish: 'Failte',
-    italian: 'Benvenuto',
-    latvian: 'Gaidits',
-    lithuanian: 'Laukiamas',
-    polish: 'Witamy',
-    spanish: 'Bienvenido',
-    swedish: 'Valkommen',
-    welsh: 'Croeso'
+const fakeBin = (num) => {
+    if (!num) return false;
+    return Number(num) < 5 ? num = new String(0)[0] : num = new String(1)[0];
 }
-
-function greet(language) {
-    const lang = Object.keys(languages).find(el => el === language)
-    if (lang) {
-        return languages[language]
-    } else {
-        return languages.english
-    }
-}
-
-console.log(greet('irish'));
-
+const result2 = fakeBin('5');
+console.log(result2);
