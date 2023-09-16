@@ -20,7 +20,6 @@ function maxChar(str) {
       mostlyUsedCahr = char;
     }
   }
-
   return mostlyUsedCahr;
 }
 
