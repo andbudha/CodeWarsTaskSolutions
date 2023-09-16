@@ -6,16 +6,14 @@ Complete the square sum function so that it squares each number passed into it a
 For example, for [1, 2, 2] it should return 9.
  */
 
-const numbers = [1, 2, 2]
+const numbers = [1, 2, 2];
 function squareSum(numbers) {
-    let total = 0;
-    for (let element of numbers)
-        total = (element * element) + total;
-    return total;
+  let total = 0;
+  for (let element of numbers) total = element * element + total;
+  return total;
 }
 
 console.log(squareSum(numbers));
-
 
 /*
 Task 2
@@ -25,15 +23,14 @@ Array can contain numbers or strings. X can be either.
 Return true if the array contains the value, false if not.
  */
 
-const arr1 = [5, 'Andrei', 9]
-const value1 = 'Andrei'
+const arr1 = [5, 'Andrei', 9];
+const value1 = 'Andrei';
 
 const value2 = 7;
 
 function check(a, x) {
-    return a.indexOf(x) === -1 ? false : true;
+  return a.indexOf(x) === -1 ? false : true;
 }
-
 
 console.log(check(arr1, value2));
 
@@ -48,12 +45,11 @@ For example, when an array is passed like [19, 5, 42, 2, 77], the output should 
 
 const numArr = [4, 13, 67, 55, 9];
 const sumTwoSmallestNumbers = (numbers) => {
-    const newArr = numbers.sort((a, b) => a - b);
-    return newArr[0] + newArr[1];
+  const newArr = numbers.sort((a, b) => a - b);
+  return newArr[0] + newArr[1];
 };
 
 console.log(sumTwoSmallestNumbers(numArr));
-
 
 /*
 Task 2
@@ -67,17 +63,16 @@ If you can, try writing it in one line of code.
 const nums1 = [4, 6, 1];
 const nums2 = [4, 4, 14];
 function findDifference(a, b) {
-    const sum1 = a.reduce((a, v) => a * v);
-    const sum2 = b.reduce((a, v) => a * v);
-    if (sum1 > sum2) {
-        return sum1 - sum2;
-    } else {
-        return sum2 - sum1;
-    }
+  const sum1 = a.reduce((a, v) => a * v);
+  const sum2 = b.reduce((a, v) => a * v);
+  if (sum1 > sum2) {
+    return sum1 - sum2;
+  } else {
+    return sum2 - sum1;
+  }
 }
 
 console.log(findDifference(nums1, nums2));
-
 
 /*
 Some other solution for the second task:
@@ -101,14 +96,20 @@ We will consider a, e, i, o, u as vowels for this Kata (but not y).
 The input string will only consist of lower case letters and/or spaces.
  */
 
-const name = 'nata'
+const name = 'nata';
 const getCount = (str) => {
-    return str
-        .toLowerCase()
-        .split('')
-        .filter(letter =>
-            letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u').length;
-}
+  return str
+    .toLowerCase()
+    .split('')
+    .filter(
+      (letter) =>
+        letter === 'a' ||
+        letter === 'e' ||
+        letter === 'i' ||
+        letter === 'o' ||
+        letter === 'u'
+    ).length;
+};
 
 console.log(getCount(name));
 
@@ -125,11 +126,11 @@ remove("Hi! Hi!") == "Hi! Hi"
 remove("Hi") == "Hi"
  */
 
-const string = 'Hi John!'
+const string = 'Hi John!';
 
 function remove(str) {
-    //coding and coding....
-    return str.at(-1) === '!' ? str.slice(0, -1) : str;
+  //coding and coding....
+  return str.at(-1) === '!' ? str.slice(0, -1) : str;
 }
 
 console.log(remove(string));
@@ -146,7 +147,7 @@ All values will be positive integers or floats, or zero.
  */
 
 function plural(n) {
-    return n !== 1;
+  return n !== 1;
 }
 
 console.log(plural(2));
@@ -163,11 +164,12 @@ Basements (negatives) stay the same as the universal level.
  */
 
 function getRealFloor(n) {
-    if (n === 0 || n < 0) {
-        return n;
-    } else if (n > 0 && n < 13) {
-        return n - 1;
-    } return n - 2;
+  if (n === 0 || n < 0) {
+    return n;
+  } else if (n > 0 && n < 13) {
+    return n - 1;
+  }
+  return n - 2;
 }
 
 console.log(getRealFloor(5));
@@ -186,8 +188,8 @@ function addFive(num) {
 */
 
 function addFive(num) {
-    var total = num + 5
-    return total;
+  var total = num + 5;
+  return total;
 }
 
 console.log(addFive(5));
@@ -204,11 +206,11 @@ const max = (list) => Math.max(...list);
 
 const arr = [5, 9, 64, 29, 87, 46, 20, 10, 29, -5, 64, -84, 67, -9];
 
-const min = (list) => list.sort((a, b) => a > b ? 1 : -1)[0];
+const min = (list) => list.sort((a, b) => (a > b ? 1 : -1))[0];
 
 console.log(min(arr));
 
-const max = (list) => list.sort((a, b) => a > b ? -1 : 1)[0];
+const max = (list) => list.sort((a, b) => (a > b ? -1 : 1))[0];
 
 console.log(max(arr));
 
@@ -230,16 +232,16 @@ The four operators are "add", "subtract", "divide", "multiply".
 */
 
 function arithmetic(a, b, operator) {
-    //your code here!
-    if (operator === 'add') {
-        return a + b;
-    } else if (operator === 'subtract') {
-        return a - b;
-    } else if (operator === 'multiply') {
-        return a * b;
-    } else if (operator === 'divide') {
-        return a / b;
-    }
+  //your code here!
+  if (operator === 'add') {
+    return a + b;
+  } else if (operator === 'subtract') {
+    return a - b;
+  } else if (operator === 'multiply') {
+    return a * b;
+  } else if (operator === 'divide') {
+    return a / b;
+  }
 }
 
 /*
@@ -255,11 +257,11 @@ b = 4
  */
 
 function between(a, b) {
-    let arr = [];
-    for (let i = a; i <= b; i++) {
-        arr.push(i);
-    }
-    return arr;
+  let arr = [];
+  for (let i = a; i <= b; i++) {
+    arr.push(i);
+  }
+  return arr;
 }
 console.log(between(2, 9));
 
@@ -274,11 +276,14 @@ GComplete the solution so that the function will break up camel casing, using a 
 ""             =>  ""
 */
 
-const string1 = "camelCasing"
-const string2 = "identifier"
+const string1 = 'camelCasing';
+const string2 = 'identifier';
 
 function solution(string) {
-    return string.split('').map(el => el.toUpperCase() === el ? ' ' + el : el).join('');
+  return string
+    .split('')
+    .map((el) => (el.toUpperCase() === el ? ' ' + el : el))
+    .join('');
 }
 
 console.log(solution(string1));
@@ -290,11 +295,11 @@ and returns the player's new health. Health can't be less than 0.
 */
 
 function combat(health, damage) {
-    if (health < damage) {
-        return 0;
-    } else {
-        return health - damage;
-    }
+  if (health < damage) {
+    return 0;
+  } else {
+    return health - damage;
+  }
 }
 
 console.log(combat(100, 110));
@@ -312,9 +317,8 @@ Your goal in this kata is to create complete the mouth_size method this method t
 If this one is an alligator(case -insensitive) return small otherwise return wide.
 */
 
-
 function mouthSize(animal) {
-    return animal.toLowerCase() === 'alligator' ? 'small' : 'wide'
+  return animal.toLowerCase() === 'alligator' ? 'small' : 'wide';
 }
 
 console.log(mouthSize('alligator'));
@@ -326,11 +330,10 @@ Write a function that returns a string in which firstname is swapped with last n
 */
 
 function nameShuffler(str) {
-    return str.split(' ').reverse().join(' ');
+  return str.split(' ').reverse().join(' ');
 }
 
 console.log(nameShuffler('Bartov Andrei'));
-
 
 /*
 Week 18
@@ -347,13 +350,19 @@ If the word's length is even, return the middle 2 characters.
 const word = 'Delia';
 
 function getMiddle(string) {
-    //Code goes here!
-    const length = string.split('').length;
-    if (length % 2 === 0) {
-        return string.split('').splice(length / 2 - 1, 2).join('');
-    } else {
-        return string.split('').splice((length - 1) / 2, 1).join('');
-    }
+  //Code goes here!
+  const length = string.split('').length;
+  if (length % 2 === 0) {
+    return string
+      .split('')
+      .splice(length / 2 - 1, 2)
+      .join('');
+  } else {
+    return string
+      .split('')
+      .splice((length - 1) / 2, 1)
+      .join('');
+  }
 }
 
 console.log(getMiddle(word));
@@ -374,32 +383,32 @@ or in the event of an invalid input.
 */
 
 const languages = {
-    english: 'Welcome',
-    czech: 'Vitejte',
-    danish: 'Velkomst',
-    dutch: 'Welkom',
-    estonian: 'Tere tulemast',
-    finnish: 'Tervetuloa',
-    flemish: 'Welgekomen',
-    french: 'Bienvenue',
-    german: 'Willkommen',
-    irish: 'Failte',
-    italian: 'Benvenuto',
-    latvian: 'Gaidits',
-    lithuanian: 'Laukiamas',
-    polish: 'Witamy',
-    spanish: 'Bienvenido',
-    swedish: 'Valkommen',
-    welsh: 'Croeso'
-}
+  english: 'Welcome',
+  czech: 'Vitejte',
+  danish: 'Velkomst',
+  dutch: 'Welkom',
+  estonian: 'Tere tulemast',
+  finnish: 'Tervetuloa',
+  flemish: 'Welgekomen',
+  french: 'Bienvenue',
+  german: 'Willkommen',
+  irish: 'Failte',
+  italian: 'Benvenuto',
+  latvian: 'Gaidits',
+  lithuanian: 'Laukiamas',
+  polish: 'Witamy',
+  spanish: 'Bienvenido',
+  swedish: 'Valkommen',
+  welsh: 'Croeso',
+};
 
 function greet(language) {
-    const lang = Object.keys(languages).find(el => el === language)
-    if (lang) {
-        return languages[language]
-    } else {
-        return languages.english
-    }
+  const lang = Object.keys(languages).find((el) => el === language);
+  if (lang) {
+    return languages[language];
+  } else {
+    return languages.english;
+  }
 }
 
 console.log(greet('irish'));
@@ -415,12 +424,11 @@ Note: input will never be an empty string
 */
 
 const fakeBin = (num) => {
-    if (!num) return false;
-    return Number(num) < 5 ? num = new String(0)[0] : num = new String(1)[0];
-}
+  if (!num) return false;
+  return Number(num) < 5 ? (num = new String(0)[0]) : (num = new String(1)[0]);
+};
 const result2 = fakeBin('5');
 console.log(result2);
-
 
 /*
 Week 19
@@ -436,9 +444,8 @@ move(3, 6) should equal 15
 */
 
 function move(position, roll) {
-    // return the new position
-    return (roll * 2) + position;
+  // return the new position
+  return roll * 2 + position;
 }
-
 
 console.log(move(3, 6));
