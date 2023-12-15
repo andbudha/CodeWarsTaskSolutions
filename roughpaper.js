@@ -1,7 +1,8 @@
-function move(position, roll) {
-    // return the new position
-    return (roll * 2) + position;
-}
+const findMidNum = (arr) => {
+  const midNum = arr.find(
+    (num) => num !== Math.min(...arr) && num !== Math.max(...arr)
+  );
+  return arr.indexOf(midNum);
+};
 
-
-console.log(move(3, 6));
+console.log(findMidNum([5, 10, 14]));
