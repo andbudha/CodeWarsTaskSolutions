@@ -1,8 +1,11 @@
-const findMidNum = (arr) => {
-  const midNum = arr.find(
-    (num) => num !== Math.min(...arr) && num !== Math.max(...arr)
+function betterThanAverage(classPoints, yourPoints) {
+  // Your code here
+  return (
+    classPoints.reduce((acc, val) => acc + val, 0) / classPoints.length <
+    yourPoints
   );
-  return arr.indexOf(midNum);
-};
+}
 
-console.log(findMidNum([5, 10, 14]));
+console.log(
+  betterThanAverage([55, 82, 67, 64, 78, 90, 61, 71, 82, 54, 87], 85)
+);

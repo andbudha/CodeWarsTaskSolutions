@@ -479,3 +479,31 @@ const findMidNum = (arr) => {
 };
 
 console.log(findMidNum([5, 10, 14]));
+
+/*
+Week 20
+Task 2
+There was a test in your class and you passed it. 
+Congratulations!
+But you're an ambitious person. 
+You want to know if you're better than the average student in your class.
+You receive an array with your peers' test scores. 
+Now calculate the average and compare your score!
+Return True if you're better, else False!
+
+Note:
+Your points are not included in the array of your class's points. For calculating the average point you may add your point to the given array!
+
+*/
+
+function betterThanAverage(classPoints, yourPoints) {
+  // Your code here
+  return (
+    classPoints.reduce((acc, val) => acc + val, 0) / classPoints.length <
+    yourPoints
+  );
+}
+
+console.log(
+  betterThanAverage([55, 82, 67, 64, 78, 90, 61, 71, 82, 54, 87], 85)
+);
