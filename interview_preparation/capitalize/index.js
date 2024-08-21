@@ -20,16 +20,6 @@ console.log(capitalize(string));
 //Path to the solution
 
 /*
-const string = 'hi, my name is andrei.';
-
-const newStr = string
-  .split(' ')
-  .map((word) => word[0].toUpperCase() + word.slice(1))
-  .join(' ');
-console.log(newStr);
-
-*/
-
 //Soltion 1
 /* 
 function capitalize(str) {

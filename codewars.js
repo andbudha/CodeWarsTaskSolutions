@@ -7,6 +7,8 @@ For example, for [1, 2, 2] it should return 9.
  */
 
 const numbers = [1, 2, 2];
+
+//Solution 1
 function squareSum(numbers) {
   let total = 0;
   for (let element of numbers) total = element * element + total;
@@ -14,6 +16,14 @@ function squareSum(numbers) {
 }
 
 console.log(squareSum(numbers));
+
+//Solution 2
+const squareNums = (arr) => {
+  const total = arr.reduce((acc, currVal) => currVal * currVal + acc, 0);
+  return total;
+};
+
+console.log(squareNums([2, 2, 2]));
 
 /*
 Task 2
