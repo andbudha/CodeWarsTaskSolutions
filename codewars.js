@@ -33,6 +33,7 @@ Array can contain numbers or strings. X can be either.
 Return true if the array contains the value, false if not.
  */
 
+//Solution 1
 const arr1 = [5, 'Andrei', 9];
 const value1 = 'Andrei';
 
@@ -43,6 +44,14 @@ function check(a, x) {
 }
 
 console.log(check(arr1, value2));
+
+//Solution 2
+
+const findValue = (arr, val) => {
+  return arr.some((el) => el === val);
+};
+const val = 'b';
+console.log(findValue([2, 'a', 7, 'b'], val));
 
 //Week 11
 
